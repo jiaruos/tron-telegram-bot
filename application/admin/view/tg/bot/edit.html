@@ -1,0 +1,59 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Bot_token')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-bot_token" data-rule="required" class="form-control" name="row[bot_token]" type="text" value="{$row.bot_token|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Bot_username')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-bot_username" data-rule="required" class="form-control" name="row[bot_username]" type="text" value="{$row.bot_username|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('备注')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-bot_username" class="form-control" name="row[bak]" type="text" value="{$row.bak|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('管理员TgId')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-tg_id" data-rule="required" class="form-control" name="row[tg_id]" type="text" value="{$row.tg_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('兑换手续费')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-fee_rate" data-rule="required" class="form-control" name="row[fee_rate]" type="text" value="{$row.fee_rate|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Hook_url')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-hook_url" data-rule="required" class="form-control" name="row[hook_url]" type="text" value="{$row.hook_url|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('查询官网')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-hook_url" data-rule="required" class="form-control" name="row[search_url]" type="text" value="{$row.search_url|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Welcome_content')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-welcome_content" class="form-control " rows="5" name="row[welcome_content]" cols="50">{$row.welcome_content|htmlentities}</textarea>
+        </div>
+    </div>
+    
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

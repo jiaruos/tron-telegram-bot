@@ -1,0 +1,32 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+    {:token()}
+    <input type="hidden" name="row[id]" value="{$row.id}">
+    
+    
+    <div class="form-group">
+        <label for="c-listeners_counts" class="control-label col-xs-12 col-sm-2">{:__('额外可监听数量')}:</label>
+        <div class="col-xs-12 col-sm-4">
+            <input id="c-listeners_counts" data-rule="required" class="form-control" name="row[listeners_counts]" type="text" value="{$row.listeners_counts}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-notice_count" class="control-label col-xs-12 col-sm-2">{:__('每日额外通知次数')}:</label>
+        <div class="col-xs-12 col-sm-4">
+            <input id="c-notice_count" data-rule="required" class="form-control" name="row[notice_count]" type="text" value="{$row.notice_count}">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="content" class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            {:build_radios('row[activation]', ['0'=>__('未激活'), '1'=>__('激活')], $row['activation'])}
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
